@@ -81,15 +81,16 @@ install_bash_aliases() {
 }
 
 
-# wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
-# sudo apt-add-repository "deb https://download.sublimetext.com/ apt/stable/"
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+sudo apt-add-repository "deb https://download.sublimetext.com/ apt/stable/"
 
-# sudo apt install -y sublime-text
-# sudo apt install -y git 
-# sudo apt install -y vim
-# sudo apt install -y htop
-# sudo apt install -y tmux
+sudo apt install -y sublime-text
+sudo apt install -y git 
+sudo apt install -y vim
+sudo apt install -y htop
+sudo apt install -y tmux
+sudo apt install -y net-tools
 
 install_two_line_bash
 install_bash_aliases
-# set_tmux_conf
+set_tmux_conf
