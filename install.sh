@@ -90,6 +90,7 @@ sudo apt install -y vim
 sudo apt install -y htop
 sudo apt install -y tmux
 sudo apt install -y net-tools
+sudo apt install -y openssh-server
 
 install_two_line_bash
 install_bash_aliases
