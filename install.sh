@@ -83,6 +83,7 @@ install_bash_aliases() {
 install_chrome(){
 	wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 	sudo dpkg -i google-chrome-stable_current_amd64.deb
+	rm google-chrome-stable_current_amd64.deb
 }
 
 install_sublime() {
