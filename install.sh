@@ -80,11 +80,17 @@ install_bash_aliases() {
 	echo '}' >> .bashrc
 }
 
+install_chrome(){
+	wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+	sudo dpkg -i google-chrome-stable_current_amd64.deb
+}
 
-wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
-sudo apt-add-repository "deb https://download.sublimetext.com/ apt/stable/"
+install_sublime() {
+	wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+	sudo apt-add-repository "deb https://download.sublimetext.com/ apt/stable/"
+	sudo apt install -y sublime-text
+}
 
-sudo apt install -y sublime-text
 sudo apt install -y git 
 sudo apt install -y vim
 sudo apt install -y htop
@@ -92,7 +98,10 @@ sudo apt install -y tmux
 sudo apt install -y net-tools
 sudo apt install -y openssh-server
 sudo apt install -y feh
+sudo apt install -y xclip 
 
+install_sublime
+install_chrome
 install_two_line_bash
 install_bash_aliases
 set_tmux_conf
